@@ -1,0 +1,54 @@
+$form-background: #f9f9f9;
+$form-border-color: #ccc;
+$form-border-radius: 5px;
+$input-background: #fff;
+$input-border: 1px solid #ddd;
+$input-padding: 10px;
+$input-margin: 10px 0;
+$button-background: #007bff;
+$button-color: #fff;
+$button-padding: 10px 20px;
+$button-border-radius: 5px;
+
+.loginForm {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: $form-background;
+  border: 1px solid $form-border-color;
+  border-radius: $form-border-radius;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+  label {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
+
+  input[type="text"],
+  input[type="password"] {
+    display: block;
+    width: calc(100% - 20px);
+    background-color: $input-background;
+    border: $input-border;
+    padding: $input-padding;
+    margin: $input-margin 0;
+    border-radius: $form-border-radius;
+    &:focus {
+      border-color: darken($form-border-color, 10%);
+    }
+  }
+
+  input[type="submit"] {
+    background-color: $button-background;
+    color: $button-color;
+    padding: $button-padding;
+    border: none;
+    border-radius: $button-border-radius;
+    cursor: pointer;
+    margin-top: 20px;
+    &:hover {
+      background-color: darken($button-background, 10%);
+    }
+  }
+}
